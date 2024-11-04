@@ -1,3 +1,10 @@
+
+
+![Screenshot 2024-11-03 230340](https://github.com/user-attachments/assets/822baf47-196b-4f9d-a721-dd1e0b0dfbff)
+
+
+
+
 ```c
 module Radix4BoothMultiplier(
     input [23:0] a,      

@@ -1,3 +1,7 @@
+![Screenshot 2024-11-04 180656](https://github.com/user-attachments/assets/33d63425-d325-4071-be82-85a866579a2a)
+
+
+
 ```c
 // Mantissa Normalisation
 wire normalize = mant_result[47]; 

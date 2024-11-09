@@ -1,3 +1,4 @@
+```c
 module FPMultArray(
     input clk,
     input reset
@@ -248,3 +249,5 @@ module DSP_1 (
       .P(result)
     );
 endmodule
+
+```

@@ -159,12 +159,12 @@ module Radix4BoothMultiplier(
     // Summing compressed products with pipelined addition
     always @(*) begin
         product = pp_sum + pp_carry;
-        shifted_product = product << 17; // Left shift the final product by 17 bits
+        shifted_product = product << 17; 
     end
 
 endmodule
 
-// 4:2 Counter Module
+
 module FourTwoCounter(
     input [30:0] a, b, c, d,
     output [30:0] sum,
@@ -174,7 +174,7 @@ module FourTwoCounter(
     assign carry = (a & b) | (c & d) | (a & c) | (b & d);
 endmodule
 
-// 3:2 Counter Module
+
 module ThreeTwoCounter(
     input [30:0] a, b, c,
     output [30:0] sum,
@@ -184,7 +184,7 @@ module ThreeTwoCounter(
     assign carry = (a & b) | (b & c) | (c & a);
 endmodule
 
-// 2:2 Counter Module
+
 module TwoTwoCounter(
     input [30:0] a, b,
     output [30:0] sum,
@@ -194,7 +194,7 @@ module TwoTwoCounter(
     assign carry = a & b;
 endmodule
 
-// DSP_1 Module
+
 module DSP_1 (
     input wire [23:0] a,
     input wire [16:0] b,
@@ -202,7 +202,7 @@ module DSP_1 (
     output [47:0] result
 );
 
-    wire [40:0] product; // Intermediate product of a and b
+    wire [40:0] product; 
 
     // Multiplication operation
   //  assign product = a * b;
@@ -215,7 +215,7 @@ module DSP_1 (
   .P(result)      // output wire [47 : 0] P
 );
 
-    // Addition with shifted_product
+    
    /* always @(*) begin
         result = product + shifted_product;
     end*/

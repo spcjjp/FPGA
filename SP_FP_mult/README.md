@@ -223,3 +223,4 @@ module DSP_1 (
 endmodule
 
 ```
+![WhatsApp Image 2024-11-10 at 09 54 06_a4dbb93c](https://github.com/user-attachments/assets/c713f28b-6edc-40b6-bf5a-b15a2df01ddc)

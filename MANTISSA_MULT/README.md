@@ -132,6 +132,32 @@ module TwoTwoCounter(
     assign sum = a ^ b;
     assign carry = a & b;
 endmodule
+
+module DSP_1 (
+    input wire [23:0] a,
+    input wire [16:0] b,
+    input wire [47:0] shifted_product,
+    output reg [47:0] result
+);
+
+    wire [40:0] product; // Intermediate product of a and b
+
+    // Multiplication operation
+   // assign product = a * b;
+    
+    dsp_macro_0 your_instance_name (
+  .CLK(CLK),  // input wire CLK
+  .A(a),      // input wire [23 : 0] A
+  .B(b),      // input wire [16 : 0] B
+  .P(product)      // output wire [40 : 0] P
+);
+
+    // Addition with shifted_product
+    always @(*) begin
+        result = product + shifted_product;
+    end
+
+endmodule
 ```
 
 ![Screenshot 2024-11-08 022708](https://github.com/user-attachments/assets/313386c5-09c7-48e2-9a2a-35624a270f3b)
